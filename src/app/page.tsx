@@ -6,22 +6,10 @@ export default function Home() {
   // Características principales de la aplicación con enlaces a las páginas correspondientes
   const features = [
     {
-      title: 'Calendario Interactivo',
-      description: 'Visualiza tus reuniones en diferentes vistas: mes, semana o día.',
-      icon: '🗓️',
-      link: '/calendar'
-    },
-    {
-      title: 'Gestión de Reuniones',
-      description: 'Crea, edita y gestiona todas tus reuniones en un solo lugar.',
+      title: 'Visualizador de Reuniones',
+      description: 'Edita todas tus reuniones en un solo lugar.',
       icon: '📅',
       link: '/meetings'
-    },
-    {
-      title: 'Transcripciones Automáticas',
-      description: 'Obtén transcripciones automáticas de tus reuniones para no perder ningún detalle.',
-      icon: '📝',
-      link: '/transcriptions'
     },
     {
       title: 'Generación de Resúmenes',
@@ -116,98 +104,6 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Sección de características */}
-      <div style={{ marginBottom: '30px' }}>
-        <h2 style={{ 
-          fontSize: '1.75rem', 
-          marginBottom: '24px',
-          textAlign: 'center'
-        }}>
-          Características Principales
-        </h2>
-        
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-          gap: '20px'
-        }}>
-          {features.map((feature, index) => (
-            <Link 
-              key={index} 
-              href={feature.link}
-              style={{ textDecoration: 'none', color: 'inherit' }}
-            >
-              <div style={{ 
-                backgroundColor: '#1f2937', 
-                borderRadius: '8px', 
-                padding: '24px',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                transition: 'transform 0.2s, box-shadow 0.2s',
-                cursor: 'pointer',
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center'
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.boxShadow = '0 10px 15px rgba(0, 0, 0, 0.2)';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-              }}
-              >
-                <div style={{ 
-                  fontSize: '2.5rem', 
-                  marginBottom: '16px',
-                  textAlign: 'center'
-                }}>
-                  {feature.icon}
-                </div>
-                
-                <h3 style={{ 
-                  fontSize: '1.25rem', 
-                  marginBottom: '12px',
-                  textAlign: 'center',
-                  color: '#e5e7eb'
-                }}>
-                  {feature.title}
-                </h3>
-                
-                <p style={{ 
-                  fontSize: '1rem',
-                  color: '#9ca3af',
-                  textAlign: 'center',
-                  flex: 1
-                }}>
-                  {feature.description}
-                </p>
-                
-                <div style={{
-                  marginTop: '16px',
-                  backgroundColor: '#374151',
-                  color: 'white',
-                  padding: '6px 12px',
-                  borderRadius: '4px',
-                  fontSize: '0.875rem',
-                  transition: 'background-color 0.2s'
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.backgroundColor = '#4c1d95';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.backgroundColor = '#374151';
-                }}
-                >
-                  Ir a {feature.title}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-      
       {/* Sección de estadísticas */}
       <div style={{ 
         backgroundColor: '#1f2937', 
@@ -254,153 +150,182 @@ export default function Home() {
           ))}
         </div>
       </div>
-      
-      {/* Sección de llamada a la acción */}
-      <div style={{ 
-        backgroundColor: '#4c1d95', 
-        borderRadius: '8px', 
-        padding: '40px 20px',
-        textAlign: 'center',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-      }}>
+
+      {/* Sección de características - Primera fila */}
+      <div style={{ marginBottom: '30px' }}>
         <h2 style={{ 
           fontSize: '1.75rem', 
-          marginBottom: '16px',
-          color: 'white'
-        }}>
-          ¿Listo para transformar tus reuniones?
-        </h2>
-        
-        <p style={{ 
-          fontSize: '1.1rem', 
-          maxWidth: '800px', 
-          margin: '0 auto 24px auto',
-          color: '#e5e7eb'
-        }}>
-          Comienza a utilizar MeetingsADRES hoy mismo y descubre cómo puedes hacer que tus reuniones sean más productivas.
-        </p>
-        
-        <Link href="/meetings" style={{
-          backgroundColor: 'white',
-          color: '#4c1d95',
-          border: 'none',
-          padding: '12px 24px',
-          borderRadius: '4px',
-          fontSize: '1rem',
-          fontWeight: 'bold',
-          cursor: 'pointer',
-          textDecoration: 'none',
-          display: 'inline-block'
-        }}>
-          Crear Mi Primera Reunión
-        </Link>
-      </div>
-      
-      {/* Enlaces rápidos a secciones principales */}
-      <div style={{ 
-        marginTop: '30px',
-        backgroundColor: '#1f2937', 
-        borderRadius: '8px', 
-        padding: '24px',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-      }}>
-        <h2 style={{ 
-          fontSize: '1.5rem', 
-          marginBottom: '16px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>
-          Acceso Rápido
+          Características Principales
         </h2>
         
         <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center',
-          flexWrap: 'wrap',
-          gap: '12px'
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(2, 1fr)', 
+          gap: '20px',
+          marginBottom: '40px'
         }}>
-          <Link href="/calendar" style={{
-            backgroundColor: '#374151',
-            color: 'white',
-            padding: '10px 16px',
-            borderRadius: '4px',
-            textDecoration: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            transition: 'background-color 0.2s'
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = '#4c1d95';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = '#374151';
-          }}
-          >
-            <span>🗓️</span> Calendario
-          </Link>
-          
-          <Link href="/meetings" style={{
-            backgroundColor: '#374151',
-            color: 'white',
-            padding: '10px 16px',
-            borderRadius: '4px',
-            textDecoration: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            transition: 'background-color 0.2s'
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = '#4c1d95';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = '#374151';
-          }}
-          >
-            <span>📅</span> Reuniones
-          </Link>
-          
-          <Link href="/transcriptions" style={{
-            backgroundColor: '#374151',
-            color: 'white',
-            padding: '10px 16px',
-            borderRadius: '4px',
-            textDecoration: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            transition: 'background-color 0.2s'
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = '#4c1d95';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = '#374151';
-          }}
-          >
-            <span>📝</span> Transcripciones
-          </Link>
-          
-          <Link href="/podcasts" style={{
-            backgroundColor: '#374151',
-            color: 'white',
-            padding: '10px 16px',
-            borderRadius: '4px',
-            textDecoration: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            transition: 'background-color 0.2s'
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = '#4c1d95';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = '#374151';
-          }}
-          >
-            <span>🎙️</span> Podcasts
-          </Link>
+          {features.slice(0, 2).map((feature, index) => (
+            <Link 
+              key={index} 
+              href={feature.link}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <div style={{ 
+                backgroundColor: '#1f2937', 
+                borderRadius: '8px', 
+                padding: '24px',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                transition: 'transform 0.2s, box-shadow 0.2s',
+                cursor: 'pointer',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                marginBottom: '20px'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.boxShadow = '0 10px 15px rgba(0, 0, 0, 0.2)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+              }}>
+                <div style={{ 
+                  fontSize: '2.5rem', 
+                  marginBottom: '16px',
+                  textAlign: 'center'
+                }}>
+                  {feature.icon}
+                </div>
+                
+                <h3 style={{ 
+                  fontSize: '1.25rem', 
+                  marginBottom: '12px',
+                  textAlign: 'center',
+                  color: '#e5e7eb'
+                }}>
+                  {feature.title}
+                </h3>
+                
+                <p style={{ 
+                  fontSize: '1rem',
+                  color: '#9ca3af',
+                  textAlign: 'center',
+                  flex: 1,
+                  marginBottom: '16px'
+                }}>
+                  {feature.description}
+                </p>
+                
+                <div style={{
+                  backgroundColor: '#374151',
+                  color: 'white',
+                  padding: '8px 16px',
+                  borderRadius: '4px',
+                  fontSize: '0.875rem',
+                  transition: 'background-color 0.2s',
+                  width: 'fit-content',
+                  margin: '0 auto'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.backgroundColor = '#4c1d95';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.backgroundColor = '#374151';
+                }}>
+                  Ver más
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+        
+        {/* Segunda fila de características */}
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(2, 1fr)', 
+          gap: '20px',
+          marginTop: '20px'
+        }}>
+          {features.slice(2, 4).map((feature, index) => (
+            <Link 
+              key={index + 2} 
+              href={feature.link}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <div style={{ 
+                backgroundColor: '#1f2937', 
+                borderRadius: '8px', 
+                padding: '24px',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                transition: 'transform 0.2s, box-shadow 0.2s',
+                cursor: 'pointer',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                marginTop: '20px'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.boxShadow = '0 10px 15px rgba(0, 0, 0, 0.2)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+              }}>
+                <div style={{ 
+                  fontSize: '2.5rem', 
+                  marginBottom: '16px',
+                  textAlign: 'center'
+                }}>
+                  {feature.icon}
+                </div>
+                
+                <h3 style={{ 
+                  fontSize: '1.25rem', 
+                  marginBottom: '12px',
+                  textAlign: 'center',
+                  color: '#e5e7eb'
+                }}>
+                  {feature.title}
+                </h3>
+                
+                <p style={{ 
+                  fontSize: '1rem',
+                  color: '#9ca3af',
+                  textAlign: 'center',
+                  flex: 1,
+                  marginBottom: '16px'
+                }}>
+                  {feature.description}
+                </p>
+                
+                <div style={{
+                  backgroundColor: '#374151',
+                  color: 'white',
+                  padding: '8px 16px',
+                  borderRadius: '4px',
+                  fontSize: '0.875rem',
+                  transition: 'background-color 0.2s',
+                  width: 'fit-content',
+                  margin: '0 auto'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.backgroundColor = '#4c1d95';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.backgroundColor = '#374151';
+                }}>
+                  Ver más
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

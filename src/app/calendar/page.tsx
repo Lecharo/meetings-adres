@@ -738,22 +738,7 @@ export default function CalendarPage() {
             </button>
           </div>
           
-          <button 
-            onClick={() => handleOpenNewMeetingModal(new Date())}
-            style={{
-              backgroundColor: '#6d28d9',
-              color: 'white',
-              border: 'none',
-              padding: '8px 16px',
-              borderRadius: '4px',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '4px'
-            }}
-          >
-            + Nueva Reunión
-          </button>
+
         </div>
         
         {/* Contenido del calendario según la vista */}

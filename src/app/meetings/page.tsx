@@ -266,7 +266,7 @@ export default function MeetingsPage() {
     <div style={{ padding: '20px' }}>
       <h1 style={{ marginBottom: '20px' }}>Reuniones</h1>
       
-      <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'space-between' }}>
+      <div style={{ marginBottom: '20px' }}>
         <input 
           type="text" 
           placeholder="Buscar reuniones..." 
@@ -279,20 +279,6 @@ export default function MeetingsPage() {
             width: '300px'
           }}
         />
-        
-        <button 
-          onClick={handleOpenNewMeetingModal}
-          style={{
-            backgroundColor: '#6d28d9',
-            color: 'white',
-            border: 'none',
-            padding: '8px 16px',
-            borderRadius: '4px',
-            cursor: 'pointer'
-          }}
-        >
-          + Nueva Reunión
-        </button>
       </div>
       
       <div style={{ display: 'flex', marginBottom: '20px' }}>
